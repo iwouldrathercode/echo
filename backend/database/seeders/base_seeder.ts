@@ -5,9 +5,9 @@ import { BaseSeeder } from '@adonisjs/lucid/seeders'
 export default class extends BaseSeeder {
   async run() {
     // First create some relationship lookup records
-    await RelationshipLookupFactory.createMany(5)
+    await RelationshipLookupFactory.createMany(4)
 
     // Then create users with relationships
-    await UserFactory.with('relationships', 5).createMany(10)
+    await UserFactory.with('relationships', 1).createMany(10)
   }
 }
