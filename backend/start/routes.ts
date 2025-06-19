@@ -14,3 +14,8 @@ router.get('/', async () => {
     hello: 'world',
   }
 })
+
+router.group(() => {
+  router.resource('users', 'UsersController')
+  router.resource('relationships', 'RelationshipsController')
+}).prefix('api/v1')
