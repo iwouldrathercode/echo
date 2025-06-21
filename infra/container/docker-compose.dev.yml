@@ -1,44 +1,14 @@
 services:
-  # AdonisJS v6 React starter kit (Development)
   web:
-    build:
-      context: ../../
-      dockerfile: infra/container/Dockerfile.dev
-    container_name: adonisjs-app-dev
-    ports:
-      - "3333:3333"
-    environment:
-      - NODE_ENV=development
-      - PORT=3333
-      - HOST=0.0.0.0
-      - DATABASE_URL=surrealdb://surrealdb:8000
-    depends_on:
-      - surrealdb
+    image: node:18
+    container_name: my-dev-container
     volumes:
-      - ../../monolith:/app
-      - /app/node_modules
+      - ../..:/workspace:cached
+    working_dir: /workspace
+    command: sleep infinity
     networks:
       - app-network
-    restart: unless-stopped
-    command: npm run dev
 
-  # SurrealDB database
-  surrealdb:
-    image: surrealdb/surrealdb:latest
-    container_name: surrealdb-dev
-    ports:
-      - "8000:8000"
-    environment:
-      - SURREAL_USER=root
-      - SURREAL_PASS=root
-    volumes:
-      - surrealdb_dev_data:/data
-    networks:
-      - app-network
-    restart: unless-stopped
-    command: start --user root --pass root memory
-
-  # Nginx reverse proxy (Development)
   nginx:
     image: nginx:alpine
     container_name: nginx-proxy-dev
@@ -52,9 +22,6 @@ services:
     networks:
       - app-network
     restart: unless-stopped
-
-volumes:
-  surrealdb_dev_data:
 
 networks:
   app-network:
