@@ -1,6 +1,6 @@
 services:
   web:
-    image: node:18
+    image: node:22.16.0
     container_name: my-dev-container
     volumes:
       - ../..:/workspace:cached
