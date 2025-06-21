@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # AdonisJS v6 React starter kit
   web:
@@ -17,7 +15,7 @@ services:
     depends_on:
       - surrealdb
     volumes:
-      - ../../backend/uploads:/app/uploads
+      - ../../monolith/uploads:/app/uploads
     networks:
       - app-network
     restart: unless-stopped
