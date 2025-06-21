@@ -144,25 +144,24 @@ export default function Home() {
 
           <article className="relative p-6 shadow-sm hover:shadow border border-sand-7 hover:border-sand-8 rounded-2xl transition ease-in-out duration-700 group flex flex-row gap-4">
             <div className="shrink-0 w-10 h-10 bg-primary/20 rounded-md flex justify-center items-center">
-              <svg className="h-6 w-6 fill-primary" viewBox="0 0 256 256">
+              <svg className="h-6 w-6 fill-primary" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill="currentColor"
-                  d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m0 192a88 88 0 1 1 88-88 88.1 88.1 0 0 1-88 88m44.42-143.16-64 32a8.05 8.05 0 0 0-3.58 3.58l-32 64A8 8 0 0 0 80 184a8.1 8.1 0 0 0 3.58-.84l64-32a8.05 8.05 0 0 0 3.58-3.58l32-64a8 8 0 0 0-10.74-10.74M138 138l-40.11 20.11L118 118l40.15-20.07Z"
+                  d="M 75 0C 75 0 75 0 75 0C 33 0 0 33 0 75C 0 75 0 925 0 925C 0 967 33 1000 75 1000C 75 1000 925 1000 925 1000C 967 1000 1000 967 1000 925C 1000 925 1000 75 1000 75C 1000 33 967 0 925 0C 925 0 75 0 75 0M 690 1000C 690 1000 534 1000 534 1000C 534 1000 534 613 534 613C 534 613 404 613 404 613C 404 613 404 462 404 462C 404 462 534 462 534 462C 534 462 534 350 534 350C 534 221 613 151 729 151C 784 151 831 155 845 157C 845 157 845 292 845 292C 845 292 765 292 765 292C 702 292 690 322 690 365C 690 365 690 462 690 462C 690 462 840 462 840 462C 840 462 820 613 820 613C 820 613 690 613 690 613C 690 613 690 1000 690 1000"
                 />
               </svg>
             </div>
 
             <div className="space-y-1">
               <h2 className="text-lg font-semibold">
-                <a href="https://discord.gg/vDcEjq6" target="_blank">
-                  <span>Discord</span>
+                <a href="https://facebook.com" target="_blank">
+                  <span>Facebook</span>
                   <span className="absolute inset-0"></span>
                 </a>
               </h2>
 
               <p className="text-sm text-sand-11 group-hover:text-sand-12 transition ease-in-out duration-700">
-                Never get lost again, ask questions, and share your knowledge or projects with a
-                growing and supportive community. Join us.
+                Connect with us on Facebook to stay updated with the latest news, announcements, and community discussions. Join our growing community!
               </p>
             </div>
           </article>
