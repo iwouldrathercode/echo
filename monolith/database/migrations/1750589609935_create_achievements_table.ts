@@ -13,7 +13,7 @@ export default class extends BaseSchema {
       table.string('url').nullable()
       table.dateTime('valid_from').notNullable()
       table.dateTime('valid_to').nullable()
-      table.string('pic').nullable()
+      table.string('avatar').nullable()
 
       table.timestamp('created_at')
       table.timestamp('updated_at')
