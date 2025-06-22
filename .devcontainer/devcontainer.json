@@ -1,0 +1,6 @@
+{
+	"name": "Node.js & TypeScript",
+	"dockerComposeFile": "../infra/container/docker-compose.dev.yml",
+	"service": "web",
+	"workspaceFolder": "/workspace"
+}

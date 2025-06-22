@@ -1,0 +1,28 @@
+services:
+  web:
+    image: node:22.16.0
+    container_name: my-dev-container
+    volumes:
+      - ../..:/workspace:cached
+    working_dir: /workspace
+    command: sleep infinity
+    networks:
+      - app-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-proxy-dev
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    depends_on:
+      - web
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
