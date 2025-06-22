@@ -2,5 +2,15 @@
 	"name": "Node.js & TypeScript",
 	"dockerComposeFile": "../infra/container/docker-compose.dev.yml",
 	"service": "web",
-	"workspaceFolder": "/workspace"
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"jripouteau.adonis-vscode-extension",
+				"vscodium-jripouteau.japa-vscode",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	}
 }
